@@ -25,7 +25,7 @@ def createFilteredDeck(self, from_selected=False):
             did = col.conf['curDeck']
             curDeck = col.decks.get(did)['name']
             search = search.replace('deck:current', '"deck:' + curDeck + '"')
-    self.mw.onCram(search + " is:new")
+    self.mw.onCram(search + " is:new or " + search)
     
 def setupMenu(self):
     menu = self.form.menuEdit
